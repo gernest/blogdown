@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Blogdown::VERSION
   spec.authors       = ["gernest"]
   spec.email         = ["geofreyernest@live.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Write in markdown for your web based rich text editor}
+  spec.description   = %q{ another markdown fanatic}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -19,11 +19,10 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.6"
-  spec.add_development_dependency "rake"
-  spec.add_development_dependency "thor"
-  spec.add_development_dependency "rspec"
-  spec.add_development_dependency "cucumber"
-  spec.add_development_dependency "kramdown"
-  spec.add_development_dependency "coderay"
-  spec.add_development_dependency "thor"
+  spec.add_development_dependency "rake","~> 10.3.2"
+  spec.add_development_dependency "thor", "~> 0.19.1"
+  spec.add_development_dependency "rspec","~>3.0.0"
+  spec.add_development_dependency "cucumber","~> 1.3.15"
+  spec.add_development_dependency "kramdown", "~> 1.4.0"
+  spec.add_development_dependency "coderay", "~> 1.1.0"
 end

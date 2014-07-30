@@ -1,3 +1,4 @@
+require 'pathname'
 require "blogdown/version"
 require 'blogdown/exceptions'
 require 'blogdown/file_pipeline'
