@@ -1,6 +1,8 @@
 # Blogdown
 
-TODO: Write a gem description
+## Features
+* syntax highlighting
+* easy to use
 
 ## Installation
 
@@ -28,20 +30,20 @@ Create a directory for your project
 
     mkdir blogdown
 
-Inside your freshly creted folder create another folder "posts"
+Inside your freshly created folder create another folder "posts"
 
     cd blogdown
     mkdir posts
 
-Now, put all your markdown folders inside this "posts" folder, remeber to use the `.md` extendion
+Now, put all your markdown files inside this "posts" folder, remember to use the `.md` extendion
 eg. `hello.md`
 
-If you are done, and wish to build your html, for your richtext editor
-Inside your project folder (our case 1blogdown`), Run
+If you are done, and wish to build your html, for your rich text editor,
+navigate to your project root directory (our case 1blogdown`), And Run
 
     blogdown build
 
-A new folder called "output" will be created and the respective output files(html) will be inside the folder
+A new directory "output" will be created and the respective output files(html) will be inside the folder
 
 ## Contributing
 
