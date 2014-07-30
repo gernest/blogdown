@@ -1,5 +1,6 @@
 require "blogdown/version"
+require 'blogdown/file_pipeline'
+require 'blogdown/publisher'
 
 module Blogdown
-  # Your code goes here...
 end

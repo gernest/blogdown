@@ -14,6 +14,10 @@
 # users commonly want.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+$LOAD_PATH<<File.expand_path('../../../lib',__FILE__)
+$root_fixture_path=File.expand_path('../fixtures',__FILE__)
+
+require 'blogdown'
 RSpec.configure do |config|
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
