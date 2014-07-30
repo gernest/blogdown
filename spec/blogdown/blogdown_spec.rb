@@ -1,3 +1,6 @@
+# This is just a funny looking spec, a lot of work is needed to improve it
+
+
 def clean_output
   root=$root_fixture_path+'/output'
   root=Pathname root
@@ -17,40 +20,4 @@ describe "A simple markdown blogger" do
   let(:publisher){ Blogdown::Publisher.new($root_fixture_path) }
 
   it{ expect{publisher.compose}.to_not raise_error}
-end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-describe Blogdown::FilePipeline do
-  context "running the scipt in the root directory" do
-    let(:pipeline){
-      root=$root_fixture_path
-      Blogdown::FilePipeline.new(root)
-    }
-    let(:stack){
-      "hello.md"
-    }
-
-    describe "Loading files" do
-      it "should load all the files and directories into the file stacks" do
-        expect(pipeline.stack.pop.basename.to_s).to eql(stack)
-      end
-    end
-  end
 end
