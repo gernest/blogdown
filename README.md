@@ -18,7 +18,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Create a directory for your project
+    mkdir blogdown
+
+Inside your freshly creted folder create another folder "posts"
+    cd blogdown
+    mkdir posts
+
+Now, put all your markdown folders inside this "posts" folder, remeber to use the `.md` extendion
+eg. `hello.md`
+
+If you are done, and wish to build your html, for your richtext editor
+Inside your project folder (our case 1blogdown`), Run
+    blogdown build
 
 ## Contributing
 
