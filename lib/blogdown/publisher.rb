@@ -10,10 +10,15 @@ module Blogdown
 
     def compose
       clean_output
-      @pipeline.stack.each do |file|
-        htm=transform(file.read)
-        @pipeline.writer(file.basename,htm)
+      if @pipeline.stack.empty?
+        raise IOError, "No file to compose"
+      else
+        @pipeline.stack.each do |file|
+          htm=transform(file.read)
+          @pipeline.writer(file.basename,htm)
+        end
       end
+
     end
 
     def transform(txt)
