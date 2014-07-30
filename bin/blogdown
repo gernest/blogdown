@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require "blogdown"
+
+Blogdown::Cli::Commandline.start
