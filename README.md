@@ -16,6 +16,12 @@ Or install it yourself as:
 
     $ gem install blogdown
 
+
+## What it does
+
+This gem converts markdown files to html files
+
+
 ## Usage
 
 Create a directory for your project
@@ -34,6 +40,8 @@ If you are done, and wish to build your html, for your richtext editor
 Inside your project folder (our case 1blogdown`), Run
 
     blogdown build
+
+A new folder called "output" will be created and the respective output files(html) will be inside the folder
 
 ## Contributing
 
