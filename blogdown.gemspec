@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["geofreyernest@live.com"]
   spec.summary       = %q{Write in markdown for your web based rich text editor}
   spec.description   = %q{ another markdown fanatic}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/gernest/blogdown"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
