@@ -19,9 +19,11 @@ Or install it yourself as:
 ## Usage
 
 Create a directory for your project
+
     mkdir blogdown
 
 Inside your freshly creted folder create another folder "posts"
+
     cd blogdown
     mkdir posts
 
@@ -30,6 +32,7 @@ eg. `hello.md`
 
 If you are done, and wish to build your html, for your richtext editor
 Inside your project folder (our case 1blogdown`), Run
+
     blogdown build
 
 ## Contributing
