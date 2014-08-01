@@ -1,5 +1,5 @@
 Feature: Serving The Files
-  I need to see what My posts will look like in the browser
+  I need to preview my posts in the browser
 
   Scenario: The index page
     Given I run "blogdown server"
