@@ -4,7 +4,9 @@ Feature: File Pipeline
   This is to offer a simple API for parts of the programs which needs access to the files processed
 
   Scenario: Loading Input files
-    Given I have a root directory
-    And There is a posts directory in the root directory
-    When I initialize initialize the file pipeline
-    Then  I should have a stack of input files
+    Given I have posts:
+        |name    |
+        |hello.md|
+        |world.md|
+    When I initialize  the file pipeline
+    Then I should see a stack of input files
