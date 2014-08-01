@@ -35,11 +35,11 @@ Inside your freshly created folder create another folder "posts"
     cd blogdown
     mkdir posts
 
-Now, put all your markdown files inside this "posts" folder, remember to use the `.md` extendion
+Now, put all your markdown files inside this "posts" folder, remember to use the `.md` extension
 eg. `hello.md`
 
 If you are done, and wish to build your html, for your rich text editor,
-navigate to your project root directory (our case 1blogdown`), And Run
+navigate to your project root directory (our case blogdown`), And Run
 
     blogdown build
 
