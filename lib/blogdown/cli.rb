@@ -16,9 +16,10 @@ module Blogdown
       desc "server", "serves the project for preview"
       def server
         ENV['BD']=Dir.pwd
-        app=Blogdown::PreviewApp.new
+
         build
-        app.run
+
+        Blogdown::PreviewApp.run!
       end
     end
   end
