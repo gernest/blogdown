@@ -6,7 +6,7 @@ require "blogdown/version"
 require 'blogdown/exceptions'
 require 'blogdown/file_pipeline'
 require 'blogdown/publisher'
-require 'blogdown/app/app'
+require 'blogdown/app'
 require 'blogdown/cli'
 
 module Blogdown
