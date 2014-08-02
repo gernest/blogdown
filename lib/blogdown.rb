@@ -1,5 +1,5 @@
 require 'pathname'
-require 'sinatra/base'
+require 'sinatra'
 require 'thor'
 
 require "blogdown/version"
