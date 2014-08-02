@@ -1,5 +1,5 @@
 module Blogdown
-  class PreviewApp<Sinatra::Application
+  class PreviewApp<Sinatra::Base
     def initialize base
       @base_dir=base
     end
