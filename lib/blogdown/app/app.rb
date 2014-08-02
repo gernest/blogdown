@@ -1,15 +1,15 @@
 module Blogdown
   class PreviewApp<Sinatra::Base
-    def initialize base
-      @base_dir=base
-    end
 
+    configure do
+      set :run, true
+    end
     get '/' do
       erb :home,:layout => :base
     end
 
     get '/posts/:name' do |file_name|
-      @source_dir=@base_dir+'/'+file_name.gsub('-','_')
+      @source_dir=ENV['BD']+'/'+file_name.gsub('-','_')
       @path=Pathname(@source_dir)
       if @path.file?
         render @path.read,:layout=>:base
