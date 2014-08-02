@@ -1,9 +1,6 @@
 module Blogdown
-  class PreviewApp<Sinatra::Base
+  class PreviewApp<Sinatra::Application
 
-    configure do
-      set :run, true
-    end
     get '/' do
       erb :home,:layout => :base
     end
