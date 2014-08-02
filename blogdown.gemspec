@@ -26,4 +26,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency "kramdown", "~> 1.4.0"
   spec.add_dependency "coderay", "~> 1.1.0"
   spec.add_dependency "thor", "~> 0.19.1"
+  spec.add_dependency "sinatra", "~> 1.4.5"
+
 end
