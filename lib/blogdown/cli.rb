@@ -1,5 +1,3 @@
-require 'thor'
-
 
 module Blogdown
   module Cli
@@ -13,6 +11,13 @@ module Blogdown
         rescue Exception=>e
           puts e.message
         end
+      end
+
+      desc "server", "serves the project for preview"
+      def server
+        app=Blogdown::PreviewApp.new(Dir.pwd)
+        build
+        app.run!
       end
     end
   end
