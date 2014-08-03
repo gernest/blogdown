@@ -1,49 +1,50 @@
 # Blogdown
 
 ## Features
-* syntax highlighting
-* easy to use
+
+* Generates html from markdown files
+* Syntax highlighting with coderay
+* Built in server
+* Simple and beautiful UI
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'blogdown'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
+Run:
 
     $ gem install blogdown
-
-
-## What it does
-
-This gem converts markdown files to html files
-
 
 ## Usage
 
 Create a directory for your project
 
-    mkdir blogdown
+    $ mkdir blogdown
 
 Inside your freshly created folder create another folder "posts"
 
-    cd blogdown
-    mkdir posts
+    $ cd blogdown
+    $ mkdir posts
 
 Now, put all your markdown files inside this "posts" folder, remember to use the `.md` extension
 eg. `hello.md`
 
-If you are done, and wish to build your html, for your rich text editor,
-navigate to your project root directory (our case blogdown`), And Run
+## Building html
 
-    blogdown build
+If you are only interested only in getting html files, navigate to the roo directory and run the following command.
 
-A new directory "output" will be created and the respective output files(html) will be inside the folder
+    $ blogdown build
+
+This will create `output` directory and dump all html files there. The naming convention is simple.
+`hello.md` will produce `hello.md.html`.
+
+## Serving the files
+
+In some cases you might be interested to see what they might be like in a browser. There is a feature for you.
+Just navigate to the project root and run.
+
+    $ blongdown server
+
+Behing the scene, the command will build the project first, and run a webserver which will be available at `http://localhost:4567`
+copy `http://localhost:456` and paste into your browser to see the files and view them with much more options.
 
 ## Contributing
 
