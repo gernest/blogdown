@@ -13,11 +13,17 @@ def clean_output
 end
 
 describe "A simple markdown blogger" do
-  before(:each) do
-    clean_output
+
+  context "Publishing" do
+    before(:each) do
+      clean_output
+    end
+    let(:publisher){ Blogdown::Publisher.new $root_fixture_path}
+
+    describe "composer" do
+      it{
+        expect{publisher.compose}.to_not raise_error
+      }
+    end
   end
-
-  let(:publisher){ Blogdown::Publisher.new($root_fixture_path) }
-
-  it{ expect{publisher.compose}.to_not raise_error}
 end
