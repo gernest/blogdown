@@ -5,6 +5,8 @@ module Blogdown
       erb :home,:layout => :base
     end
 
+    # Serves generated files found in the ouput folder
+    # It does so, by reading the files, and dumping the string to be rendered with `erb`
     get '/posts/:name' do |file_name|
       @source_dir=ENV['BD']+'/output/'+file_name.gsub('-','_')+'.md.html'
       @path=Pathname(@source_dir)
