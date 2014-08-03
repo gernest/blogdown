@@ -48,7 +48,7 @@ copy `http://localhost:4567` and paste into your browser to see the files and vi
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/blogdown/fork )
+1. Fork it ( https://github.com/gernest/blogdown/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
