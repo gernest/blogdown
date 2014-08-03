@@ -25,6 +25,7 @@ module Blogdown
       @source_dir=ENV['BD']+'/output/'+file_name.gsub('-', '_')+'.md.html'
       @path      =Pathname(@source_dir)
       if @path.file?
+        @title=@path.basename.to_s.gsub('.html', '')
         erb @path.read, :layout => :post
       else
         halt 404
