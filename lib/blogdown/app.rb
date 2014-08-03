@@ -6,7 +6,7 @@ module Blogdown
     end
 
     get '/posts/:name' do |file_name|
-      @source_dir=ENV['BD']+'/'+file_name.gsub('-','_')
+      @source_dir=ENV['BD']+'/output/'+file_name.gsub('-','_')+'.html'
       @path=Pathname(@source_dir)
       if @path.file?
         render @path.read,:layout=>:base
