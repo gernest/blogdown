@@ -29,7 +29,7 @@ eg. `hello.md`
 
 ## Building html
 
-If you are only interested in getting html files, navigate to the roo directory and run the following command.
+If you are only interested in getting html files, navigate to the project root directory and run the following command.
 
     $ blogdown build
 
@@ -44,7 +44,7 @@ Just navigate to the project root and run.
     $ blongdown server
 
 Behing the scene, the command will build the project first, and run a webserver which will be available at `http://localhost:4567`
-copy `http://localhost:456` and paste into your browser to see the files and view them with much more options.
+copy `http://localhost:4567` and paste into your browser to see the files and view them with much more options.
 
 ## Contributing
 
