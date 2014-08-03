@@ -1,5 +1,7 @@
 module Blogdown
   class FilePipeline
+    # THis keeps track of files being processed
+
     attr_accessor :stack
     def initialize(root)
       @root=root
@@ -8,6 +10,7 @@ module Blogdown
       load_files
     end
 
+    # @return [Array]  The files under posts folder
     def load_files
       base_input=@root+'/posts'
 
@@ -24,11 +27,19 @@ module Blogdown
       end
     end
 
+    # Writes given contents into a file with a name given as a parameter
+    # @param name [String] The name of the file to be written
+    # @param contents [String] The contents to be written on the file
     def writer(name,contents)
       file=@base.to_s+"/output/#{name}.html"
-      file=File.new(file.to_s,"w")
-      file.write(contents)
-      file.close
+
+      begin
+        file=File.new(file.to_s,"w")
+        file.write(contents)
+        file.close
+      rescue Exception=>e
+        raise e
+      end
     end
   end
 end
