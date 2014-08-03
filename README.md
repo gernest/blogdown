@@ -29,7 +29,7 @@ eg. `hello.md`
 
 ## Building html
 
-If you are only interested only in getting html files, navigate to the roo directory and run the following command.
+If you are only interested in getting html files, navigate to the roo directory and run the following command.
 
     $ blogdown build
 
