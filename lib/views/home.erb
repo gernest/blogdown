@@ -1,1 +1,19 @@
-<h1> Welcome Home</h1>
+<div id="home">
+  <div id="files">
+    <ul>
+      <%- built_files.each do |file| %>
+          <li>
+            <a href="/post/<%= file.basename.to_s.gsub('.md.html', '') %>">
+              <%= file.basename.to_s %>
+            </a>
+            <button id="copy-file">
+              copy
+            </button>
+            <button>
+              view
+            </button>
+          </li>
+      <%- end %>
+    </ul>
+  </div>
+</div>
