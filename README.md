@@ -5,7 +5,6 @@
 * Generates html from markdown files
 * Syntax highlighting with coderay
 * Built in server
-* Simple and beautiful UI
 
 ## Installation
 
