@@ -6,11 +6,9 @@
             <a href="/post/<%= file.basename.to_s.gsub('.md.html', '') %>">
               <%= file.basename.to_s %>
             </a>
-            <button>
               <a href="/post/<%= file.basename.to_s.gsub('.md.html', '') %>">
-                view
+                <button>view</button>
               </a>
-            </button>
           </li>
       <% end %>
     </ul>
