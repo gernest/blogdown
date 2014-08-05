@@ -22,7 +22,7 @@ module Blogdown
     # Serves generated files found in the ouput folder
     # It does so, by reading the files, and dumping the string to be rendered with `erb`
     get '/post/:name' do |file_name|
-      @source_dir=ENV['BD']+'/output/'+file_name.gsub('-', '_')+'.md.html'
+      @source_dir=ENV['BD']+'/output/'+file_name+'.md.html'
       @path      =Pathname(@source_dir)
       if @path.file?
         @title=@path.basename.to_s.gsub('.html', '')
