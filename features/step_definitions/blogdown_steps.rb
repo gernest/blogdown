@@ -1,5 +1,3 @@
-require 'aruba/cucumber'
-
 When(/^I run command "(.*?)"$/) do |cmd|
   args=Array.new
   args<<cmd
