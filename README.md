@@ -1,4 +1,5 @@
 # Blogdown
+[![Build Status](https://travis-ci.org/gernest/blogdown.svg?branch=master)](https://travis-ci.org/gernest/blogdown)
 
 ## Features
 
