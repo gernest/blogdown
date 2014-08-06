@@ -3,6 +3,3 @@ rvm:
    - 2.0.0
 
 script: bundle exec rake
-notifications:
-   email:
-   - geofreyernest@live.com
