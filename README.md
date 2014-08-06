@@ -1,6 +1,7 @@
 # Blogdown
 [![Build Status](https://travis-ci.org/gernest/blogdown.svg?branch=master)](https://travis-ci.org/gernest/blogdown)
 
+[![Coverage Status](https://coveralls.io/repos/gernest/blogdown/badge.png)](https://coveralls.io/r/gernest/blogdown)
 ## Features
 
 * Generates html from markdown files
