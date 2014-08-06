@@ -18,6 +18,11 @@ $LOAD_PATH<<File.expand_path('../../../lib',__FILE__)
 $root_fixture_path=File.expand_path('../fixtures',__FILE__)
 
 require 'blogdown'
+
+require 'coveralls'
+
+Coveralls.wear!
+
 RSpec.configure do |config|
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
