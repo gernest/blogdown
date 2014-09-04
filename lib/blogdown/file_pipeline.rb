@@ -12,6 +12,7 @@ module Blogdown
 
     # @return [Array]  The files under posts folder
     def load_files
+      puts "loading files from #{@root.to_s}"
       base_input=@root
 
       base=Pathname.new(base_input)
@@ -20,11 +21,12 @@ module Blogdown
       end
       if base.exist?
         base.each_child do|child|
-          if child.basename.to_s=~/^*.md$/
+            puts "loading #{child.to_s}"
             self.stack<<child
-          end
+            puts "Done"
         end
       end
+      puts "Finished loading #{self.stack.length} files"
     end
 
     # Writes given contents into a file with a name given as a parameter

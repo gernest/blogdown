@@ -11,7 +11,7 @@ module Blogdown
           publisher=Blogdown::Publisher.new(Dir.pwd)
           publisher.compose
         rescue Exception=>e
-          puts e.message
+          raise e
         end
       end
 

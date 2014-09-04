@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3 bd-sidebar">
+      <ul class="nav nav-list bd-sidenav">
+        <% wiki_files.each_key do |f| %>
+      <li>
+          <a href="#<%= f%>"><i
+          class="icon-chevron-right"></i> <%= f%></a>
+        </li>
+      </ul>
+    </div>
+        <% end %>
+    <div class="col-lg-9">
+      <% wiki_files.each do |k,v| %>
+      <section id="<%= k %>">
+        <%= v %>
+      </section>
+          <% end %>
+    </div>
+
+</div>
+</div>
