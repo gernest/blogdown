@@ -1,0 +1,65 @@
+.bd-navbar{
+    border-bottom: 2px solid #000000;
+    min-height: 40px;
+
+}
+
+.bd-brand{
+    height: auto;
+    padding: 8px;
+    color: #000000;
+    font-weight: bolder;
+    font-family: "Monaco", "Inconsolata", "Consolas", monospace;
+}
+
+.bd-nav{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-right: 15px;
+    font-size: 100%;
+}
+.bd-nav a{
+    color: #000000;
+}
+
+.bd-sidenav{
+    width: 240px;
+    margin: 30px,0,0;
+    padding: 0;
+    background: #ffffff;
+}
+.bd-sidenav>li>a{
+    display: block;
+    width: 190px;
+    margin: 0,0 -1px;
+    padding: 8px 14px;
+    border: 1px solid lightsteelblue;
+}
+.bd-sidenav.affix{
+    top: 40px;
+}
+.bd-sidenav.affix-bottom{
+    position: absolute;
+    top: auto;
+    bottom: 270px;
+}
+
+.bd-sidenav>li:first-child>a{
+    border-radius: 6px 6px 0 0;
+}
+.bd-sidenav>li:last-child>a{
+    border-radius: 0 0 6px 6px;
+}
+
+.bd-sidenav>li.active>a{
+    position: relative;
+    z-index: 2;
+    padding: 9px 15px;
+    border: 0;
+}
+
+.bd-sidenav .glyphicon-chevron-right{
+    float: right;
+    color: #000000;
+    font-size: 25px;
+}
