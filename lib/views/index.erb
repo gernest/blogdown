@@ -16,14 +16,12 @@
 
   <!-- The post sections
   ================================================-->
-  <div class="col-lg-9">
-    <div class="container">
-      <% wiki_files.each do|k,v| %>
-      <section id="<%= k%>">
-        <%= v %>
-      </section>
-      <% end %>
-    </div>
+  <div class="col-lg-9 section">
+
+            <% wiki_files.each do|k,v| %>
+              <h1 id="<%= k%>"><%= k%></h1>
+              <%= v%>
+            <% end %>
   </div>
 
 </div>

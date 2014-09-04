@@ -30,10 +30,11 @@ module Blogdown
     end
 
     def transform(txt)
-      self.markdown.render(GitHub::Markdown.render(txt))
+      self.markdown.render(GitHub::Markdown.render_gfm(txt))
     end
     def valid_id(v)
       value=v.basename.to_s.gsub(/^*.([a-z]|[A-Z]){2,}$/,"")
+      value=value.gsub(" ","-")
     end
 
     def render_options
