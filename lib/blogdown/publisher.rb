@@ -1,4 +1,5 @@
 require 'redcarpet'
+require 'github/markdown'
 
 module Blogdown
   class Publisher
@@ -29,7 +30,7 @@ module Blogdown
     end
 
     def transform(txt)
-      self.markdown.render(txt)
+      self.markdown.render(GitHub::Markdown.render(txt))
     end
     def valid_id(v)
       value=v.basename.to_s.gsub(/^*.([a-z]|[A-Z]){2,}$/,"")
