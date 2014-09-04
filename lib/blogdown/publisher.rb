@@ -16,10 +16,13 @@ module Blogdown
         raise IOError, "No file to compose"
       else
         @pipeline.stack.each do |file|
-          puts "processing #{file.to_s}"
-          htm=transform(file.read)
-          @output_stack[valid_id(file)]=htm
-          puts "done"
+          if file.file?
+            puts "processing #{file.to_s}"
+            htm=transform(file.read)
+            @output_stack[valid_id(file)]=htm
+            puts "done"
+          end
+
         end
       end
       @output_stack
@@ -33,7 +36,7 @@ module Blogdown
     end
 
     def render_options
-      {:with_toc_data=>false, :hard_warp=>true}
+      {:with_toc_data=>false, :hard_warp=>true, :prettify=>true}
     end
 
     def markdown_options
