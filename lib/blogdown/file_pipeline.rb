@@ -12,7 +12,7 @@ module Blogdown
 
     # @return [Array]  The files under posts folder
     def load_files
-      base_input=@root+'/posts'
+      base_input=@root
 
       base=Pathname.new(base_input)
       unless base.exist?
