@@ -8,8 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Blogdown::VERSION
   spec.authors       = ["gernest"]
   spec.email         = ["geofreyernest@live.com"]
-  spec.summary       = %q{Write in markdown for your web based rich text editor}
-  spec.description = %q{ A Simple Markdown Solution With synntax highlighing}
+  spec.summary       = %q{Turning your github wiki to a nice looking offline
+webpage}
+  spec.description = %q{ An offline github wiki viewer}
   spec.homepage      = "https://github.com/gernest/blogdown"
   spec.license       = "MIT"
 
