@@ -38,6 +38,11 @@ Behing the scene, the command will build the project first, and run a webserver 
 copy `http://localhost:4567` and paste into your browser to see the files and view them with much more options.
 
 ## Snapshots
+![blogdown](/1.PNG?raw=true "Blogdown")
+
+![blogdown](/2.PNG?raw=true "Blogdown")
+
+
 
 ## Contributing
 
