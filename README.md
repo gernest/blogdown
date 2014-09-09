@@ -2,11 +2,16 @@
 [![Build Status](https://travis-ci.org/gernest/blogdown.svg?branch=master)](https://travis-ci.org/gernest/blogdown)
 
 [![Coverage Status](https://coveralls.io/repos/gernest/blogdown/badge.png)](https://coveralls.io/r/gernest/blogdown)
-## Features
 
-* Generates html from markdown files
-* Syntax highlighting with coderay
-* Built in server
+
+## What this is all about
+Blogdown helps to view your favorite github wiki offline. I created this
+project to help me, have a good source of documentation on my pc,
+since I dont have the privilege of internet access. I go online once in a
+while, and its frusttating when I ineed to go online to view documentation.
+
+
+
 
 ## Installation
 
@@ -16,36 +21,28 @@ Run:
 
 ## Usage
 
-Create a directory for your project
+Clone your favorite wiki
 
-    $ mkdir blogdown
+    $ git clone [The Wiki URL goes HERE]
 
-Inside your freshly created folder create another folder "posts"
+Cd into your wiki directory
 
-    $ cd blogdown
-    $ mkdir posts
+    $cd mywiki.wiki
 
-Now, put all your markdown files inside this "posts" folder, remember to use the `.md` extension
-eg. `hello.md`
 
-## Building html
+And, blog it down
 
-If you are only interested in getting html files, navigate to the project root directory and run the following command.
-
-    $ blogdown build
-
-This will create `output` directory and dump all html files there. The naming convention is simple.
-`hello.md` will produce `hello.md.html`.
-
-## Serving the files
-
-In some cases you might be interested to see what they might be like in a browser. There is a feature for you.
-Just navigate to the project root and run.
-
-    $ blongdown server
+    $ blogdown server
 
 Behing the scene, the command will build the project first, and run a webserver which will be available at `http://localhost:4567`
 copy `http://localhost:4567` and paste into your browser to see the files and view them with much more options.
+
+## Snapshots
+![blogdown](/1.PNG?raw=true "Blogdown")
+
+![blogdown](/2.PNG?raw=true "Blogdown")
+
+
 
 ## Contributing
 

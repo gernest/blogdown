@@ -1,0 +1,29 @@
+<div class="row">
+  <!-- The sidebar
+  ============================================-->
+  <div class="col-lg-3" id="bd-sidebar">
+    <ul class="nav nav-list bd-sidenav">
+      <% wiki_files.each_key do|f| %>
+      <li>
+        <a href="#<%= f%>">
+          <i class="icon-chevron-right"></i>
+          <%= f %>
+        </a>
+      </li>
+       <% end %>
+    </ul>
+  </div>
+
+  <!-- The post sections
+  ================================================-->
+  <div class="col-lg-9 section">
+
+            <% wiki_files.each do|k,v| %>
+              <h1 id="<%= k%>"><%= k%></h1>
+              <%= v%>
+            <% end %>
+  </div>
+
+</div>
+
+

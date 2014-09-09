@@ -1,47 +1,48 @@
-require 'coderay'
-require 'kramdown'
+require 'redcarpet'
+require 'github/markdown'
 
 module Blogdown
   class Publisher
+    attr_accessor :renderer,:markdown
     def initialize root
       @pipeline=Blogdown::FilePipeline.new root
       @base=root
+      @output_stack={}
+      @renderer=Redcarpet::Render::HTML.new(render_options)
+      @markdown=Redcarpet::Markdown.new(@renderer, markdown_options)
     end
 
     def compose
-      clean_output
       if @pipeline.stack.empty?
         raise IOError, "No file to compose"
       else
         @pipeline.stack.each do |file|
-          htm=transform(file.read)
-          @pipeline.writer(file.basename,htm)
+          if file.file?
+            puts "processing #{file.to_s}"
+            htm=transform(file.read)
+            @output_stack[valid_id(file)]=htm
+            puts "done"
+          end
+
         end
       end
-
+      @output_stack
     end
 
     def transform(txt)
-      Kramdown::Document.new(txt,kramdown_options).to_html
+      self.markdown.render(GitHub::Markdown.render_gfm(txt))
+    end
+    def valid_id(v)
+      value=v.basename.to_s.gsub(/^*.([a-z]|[A-Z]){2,}$/,"")
+      value=value.gsub(" ","-")
     end
 
-    def file_stack
-      @pipeline.stack
+    def render_options
+      {:with_toc_data=>false, :hard_warp=>true, :prettify=>true}
     end
 
-    def clean_output
-      base_root=@base+'/output'
-      base_root=Pathname base_root
-      if base_root.exist?
-        base_root.rmtree
-        base_root.mkpath
-      else
-        base_root.mkpath
-      end
-    end
-
-    def kramdown_options
-      {coderay_css: "style", coderay_line_numbers: nil}
+    def markdown_options
+      {:auto_link=>true}
     end
   end
 end
